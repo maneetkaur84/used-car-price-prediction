@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="static\style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    <!-- Title -->
+    <title>Car Price Prediction Model</title>
+</head>
+<body>
+    
+    <!-- Latest compiled and minified CSS Bootstrap CND-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <div class="title_box">
+
+      <!-- Heading of the page -->
+      <h1 class="text-center" id="heading" >Car Price Prediction</h1>
+      <div class="text-center" id="price">{{ result }}</div>
+    </div>
+
+    <!-- Container with form and image -->
+    <div class="content">
+
+        <!-- Image Section -->
+        <div class="image_div">
+
+          <!-- Image -->
+          <img class="image" src={{url_for('static', filename='car_image.jpg')}}/>
+          </div>
+
+          <!-- Form Section-->
+          <div class="input_form">
+
+            <!-- Bootstrap form -->
+            <form method="POST" action="/predict">
+                <div class="mb-3">
+                  <label class="form-label">Year of the car bought</label>
+                  <textarea class="form-control" rows="1" name="year" placeholder="Example:- 2014" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Kilometer driven</label>
+                    <textarea class="form-control" rows="1" name="km_driven" placeholder="Example:- 145500" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Fuel type </label>
+                    <textarea class="form-control" rows="1" name="fuel" placeholder="Type:- 0 for Diesel, 1 for Petrol, 2 for CNG,  3 for LPG" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Seller Type</label>
+                    <textarea class="form-control"  rows="1" name="seller_type" placeholder="Type:- 0 for Individual, 1 for Dealer, 2 for Trustmark Dealer" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Transmission</label>
+                    <textarea class="form-control" rows="1" name="transmission" placeholder="Type:- 0 for Manual, 1 for Automatic" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Owners</label>
+                    <textarea class="form-control" rows="2" name="owner" placeholder="Type:- 1 for First Owner, 2 for Second Owner, 3 for Third Owner, 4 for Fourth & Above Owner, 0 for Test Drive Car" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Mileage</label>
+                    <textarea class="form-control" rows="1" name="mileage" placeholder="Example:- 23.4" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Engine</label>
+                    <textarea class="form-control" rows="1" name="engine" placeholder="Example:- 1248" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Maximum power</label>
+                    <textarea class="form-control" rows="1" name="max_power" placeholder="Example:- 57.5" required="1"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Torque</label>
+                  <textarea class="form-control" rows="1" name="torque" placeholder="Example:- 59" required="1"></textarea>
+               </div>
+
+               <div class="mb-3">
+                <label class="form-label">Seats</label>
+                <textarea class="form-control" rows="1" name="seats" placeholder="Example:- 5" required="1"></textarea>
+               </div>
+
+              <!-- Predict Button -->
+              <div class="mb-3">
+                <button type="submit" class="btn btn-lg btn-block" id="predict_button">Predict</button>
+              </div>
+            </form>
+        </div>    
+    </div>
+</body>
+</html>

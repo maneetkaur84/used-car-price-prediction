@@ -1,0 +1,158 @@
+                                                /* Stylesheet for index.html */
+body
+{
+    padding:15px;
+    margin:auto;
+}
+
+.title_box
+{
+    display:block;
+    padding:5px;
+    max-width:80%;
+    margin:auto;
+    border: 1px black solid;
+}
+
+@media (min-width:807px)
+{
+#heading
+{
+    font-size: 60px;
+    font-style: bold;
+    font-family: Arial, sans-serif;
+}
+
+#price
+{
+    font-size: 30px;
+    background-color: #ececec;
+}
+}
+
+@media (max-width:806px) and (min-width:604px)
+{
+#heading
+{
+    font-size: 50px;
+    font-style: bold;
+    font-family: Arial, sans-serif;
+}
+
+#price
+{
+    font-size: 25px;
+    background-color: #ececec;
+}
+}
+
+@media (max-width:604px)
+{
+ #heading
+{
+    font-size: 25px;
+    font-style: bold;
+    font-family: Arial, sans-serif;
+}
+
+#price
+{
+    font-size: 20px;
+    background-color: #ececec;
+}
+}
+
+.content
+{
+    max-width:80%;
+    margin:auto;
+    display:flex;
+    margin-top:10px;
+    border: 1px black solid;
+}
+
+option:hover
+{
+  background-color: #ececec;
+}
+
+option
+{
+    background-color: white;
+}
+
+.image
+{
+    object-fit: contain;
+    height:600px; 
+    margin-right: 5%;
+}
+
+.image_div
+{
+    height:100%;
+    width:57%;
+    margin:auto;
+    margin-right:3%;   
+}
+
+@media (max-width:745px)
+{
+    .content .input_form
+    {
+        padding:10px;
+        width:100%;
+    }
+}
+
+@media (max-width:1206px){
+    .image_div
+    {
+          visibility: hidden;
+          margin:0%;
+          width:0px;
+          padding:0px;
+    }
+
+    .image
+    {
+        height:0px;
+        width:0px;
+    }
+}
+
+@media (max-width:1205px) and (min-width:746px)
+{
+    .content .input_form
+    {
+        width: 70%;
+    }
+}
+
+.input_form
+{
+    
+    height:fit-content;
+    width:900px;
+    margin:auto;
+    height:50%;
+    padding:20px;
+}
+
+@media (min-width:1280px) 
+{
+.mb-3
+{
+    width:80%;
+}
+}
+
+#predict_button
+{
+    background-color: #ff745d;
+    color: white;
+    width:50%;
+    margin:auto;
+}
+
+
